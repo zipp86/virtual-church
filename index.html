@@ -1,0 +1,50 @@
+<!doctype html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Church of the Wilderness - Live Stream</title><style>body{margin:0;padding:0;overflow:hidden}.slideshow{position:absolute;top:0;left:0;width:100%;height:100vh;display:flex;justify-content:center;align-items:center}.slideshow img{width:100%;height:100vh;object-fit:cover;transition:opacity .5s}.slideshow img.active{opacity:1}.slideshow img:not(.active){opacity:0}.buttons{position:absolute;bottom:20px;left:20px;display:flex;flex-wrap:wrap}.button{margin:10px;padding:10px 20px;border:none;border-radius:10px;background-color:#333;color:#fff;cursor:pointer}.button:hover{background-color:#444}.live-stream{position:absolute;top:20px;right:20px;width:25%;height:25vh;display:flex;justify-content:center;align-items:center}.live-stream iframe{width:100%;height:100%;border:none}.comment-tab{position:absolute;bottom:0;right:0;width:25%;height:20vh;padding:10px;background-color:#333;color:#fff}</style></head><body><div class="slideshow"><img src="https://images.pexels.com/photos/33109/fall-autumn-forest-tree.jpg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="Image 1" class="active"> <img src="https://images.pexels.com/photos/158163/church-forest-trees-nature-158163.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="Image 2"> <img src="https://images.pexels.com/photos/33111/fall-autumn-forest-tree.jpg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="Image 3"> <img src="https://images.pexels.com/photos/158164/church-forest-trees-nature-158164.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="Image 4"> <img src="https://images.pexels.com/photos/33110/fall-autumn-forest-tree.jpg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="Image 5"></div><div class="buttons"><a href="#" class="button" id="sanctuary-button">Sanctuary</a> <a href="#" class="button" id="live-stream-button">Live Stream</a> <a href="#" class="button" id="community-forum-button">Community Forum</a> <a href="#" class="button" id="prayer-requests-button">Prayer Requests</a> <a href="#" class="button" id="events-button">Events</a> <a href="#" class="button" id="giving-button">Giving</a></div><div class="live-stream"><iframe src="https://www.youtube.com/embed/LIVE_STREAM_ID" frameborder="0" allowfullscreen></iframe></div><div class="comment-tab"><h2>Live Chat</h2><div class="chat-messages"></div><input id="chat-input" placeholder="Type a message..."> <button id="chat-send">Send</button></div><script>const slideshow = document.querySelector('.slideshow');
+        const images = slideshow.querySelectorAll('img');
+        let currentImage = 0;
+        
+        function rotateSlideshow() {
+            images[currentImage].classList.remove('active');
+            currentImage = (currentImage + 1) % images.length;
+            images[currentImage].classList.add('active');
+        }
+        
+        setInterval(rotateSlideshow, 5000);
+        
+        // Add event listeners to buttons
+        document.getElementById('sanctuary-button').addEventListener('click', function() {
+            window.location.href = '/sanctuary';
+        });
+        
+        document.getElementById('live-stream-button').addEventListener('click', function() {
+            window.location.href = '/live-streaming';
+        });
+        
+        document.getElementById('community-forum-button').addEventListener('click', function() {
+            window.location.href = '/community-forum';
+        });
+        
+        document.getElementById('prayer-requests-button').addEventListener('click', function() {
+            window.location.href = '/prayer-requests';
+        });
+        
+        document.getElementById('events-button').addEventListener('click', function() {
+            window.location.href = '/events';
+        });
+        
+        document.getElementById('giving-button').addEventListener('click', function() {
+            window.location.href = '/giving';
+        });
+        
+        // Add event listener to chat input
+        document.getElementById('chat-input').addEventListener('keypress', function(event) {
+            if (event.key === 'Enter') {
+                // Send chat message
+                console.log('Chat message sent!');
+            }
+        });
+        
+        // Add event listener to chat send button
+        document.getElementById('chat-send').addEventListener('click', function() {
+            // Send chat message
+            console.log('Chat message sent!');
+        });</script><script>!function(l){function e(e){for(var r,t,n=e[0],o=e[1],u=e[2],f=0,i=[];f<n.length;f++)t=n[f],p[t]&&i.push(p[t][0]),p[t]=0;for(r in o)Object.prototype.hasOwnProperty.call(o,r)&&(l[r]=o[r]);for(s&&s(e);i.length;)i.shift()();return c.push.apply(c,u||[]),a()}function a(){for(var e,r=0;r<c.length;r++){for(var t=c[r],n=!0,o=1;o<t.length;o++){var u=t[o];0!==p[u]&&(n=!1)}n&&(c.splice(r--,1),e=f(f.s=t[0]))}return e}var t={},p={1:0},c=[];function f(e){if(t[e])return t[e].exports;var r=t[e]={i:e,l:!1,exports:{}};return l[e].call(r.exports,r,r.exports,f),r.l=!0,r.exports}f.m=l,f.c=t,f.d=function(e,r,t){f.o(e,r)||Object.defineProperty(e,r,{enumerable:!0,get:t})},f.r=function(e){"undefined"!=typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(e,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(e,"__esModule",{value:!0})},f.t=function(r,e){if(1&e&&(r=f(r)),8&e)return r;if(4&e&&"object"==typeof r&&r&&r.__esModule)return r;var t=Object.create(null);if(f.r(t),Object.defineProperty(t,"default",{enumerable:!0,value:r}),2&e&&"string"!=typeof r)for(var n in r)f.d(t,n,function(e){return r[e]}.bind(null,n));return t},f.n=function(e){var r=e&&e.__esModule?function(){return e.default}:function(){return e};return f.d(r,"a",r),r},f.o=function(e,r){return Object.prototype.hasOwnProperty.call(e,r)},f.p="/myapp/";var r=window.webpackJsonp=window.webpackJsonp||[],n=r.push.bind(r);r.push=e,r=r.slice();for(var o=0;o<r.length;o++)e(r[o]);var s=n;a()}([])</script><script src="/myapp/static/js/2.00337174.chunk.js"></script><script src="/myapp/static/js/main.10525878.chunk.js"></script></body></html>
